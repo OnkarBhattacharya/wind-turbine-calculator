@@ -308,19 +308,19 @@ export default function Home() {
               <div className="flex items-center gap-2 mb-2">
                 <Wind className="w-5 h-5 text-teal-400" />
                 <span className="text-teal-400 text-sm font-semibold tracking-widest uppercase">
-                  Multi-Model Calculator
+                  Wind Energy Analysis
                 </span>
               </div>
               <h1
                 className="text-2xl lg:text-3xl font-bold text-white mb-2 leading-tight"
                 style={{ fontFamily: "Space Grotesk, sans-serif" }}
               >
-                Wind Turbine
+                KOVentures
                 <br />
-                <span className="text-teal-400">Requirement Estimator</span>
+                <span className="text-teal-400">Wind Solution</span>
               </h1>
               <p className="text-slate-300 text-sm max-w-lg">
-                Compare 1, 3, 5, and 10 kW models side-by-side. Enter coordinates and energy target to see which turbine configuration works best for your site.
+                Professional turbine sizing tool. Compare 1, 3, 5, and 10 kW models side-by-side. Enter your site coordinates and energy requirements to find the optimal turbine configuration.
               </p>
             </div>
             <img
@@ -705,11 +705,11 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <Wind className="w-4 h-4 text-teal-400" />
             <span className="text-slate-400 text-sm font-medium" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
-              Multi-Model Wind Turbine Calculator
+              KOVentures Wind Solution
             </span>
           </div>
           <div className="text-xs text-slate-500 text-center">
-            Wind data: NASA POWER (MERRA-2) · Compare 1, 3, 5, 10 kW models · For planning estimates only
+            Wind data: NASA POWER (MERRA-2) · Professional turbine sizing · For planning estimates only
           </div>
         </div>
       </footer>
