@@ -1,3 +1,10 @@
+/**
+ * Wind Turbine Calculator — Global Design System
+ * Philosophy: Scientific/Technical SaaS, Bauhaus-inspired minimalism
+ * Color: Off-white bg, deep slate headings, teal primary, emerald results
+ * Typography: Space Grotesk (headings) + Inter (body) + tabular nums for data
+ */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -43,74 +50,61 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  --radius: 0.5rem;
+
+  /* Teal primary */
+  --primary: oklch(0.52 0.14 185);
+  --primary-foreground: oklch(0.98 0.005 185);
+
+  /* Off-white background */
+  --background: oklch(0.985 0.003 240);
+  --foreground: oklch(0.13 0.02 240);
+
+  /* Cards */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.13 0.02 240);
+
+  /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.13 0.02 240);
+
+  /* Secondary */
+  --secondary: oklch(0.95 0.005 240);
+  --secondary-foreground: oklch(0.25 0.02 240);
+
+  /* Muted */
+  --muted: oklch(0.95 0.004 240);
+  --muted-foreground: oklch(0.52 0.015 240);
+
+  /* Accent — teal light */
+  --accent: oklch(0.93 0.04 185);
+  --accent-foreground: oklch(0.25 0.1 185);
+
+  /* Destructive */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
-}
 
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Borders */
+  --border: oklch(0.88 0.006 240);
+  --input: oklch(0.88 0.006 240);
+  --ring: oklch(0.52 0.14 185);
+
+  /* Charts — teal to emerald gradient */
+  --chart-1: oklch(0.52 0.14 185);
+  --chart-2: oklch(0.60 0.16 165);
+  --chart-3: oklch(0.68 0.17 155);
+  --chart-4: oklch(0.45 0.12 195);
+  --chart-5: oklch(0.35 0.10 205);
+
+  /* Sidebar */
+  --sidebar: oklch(0.13 0.02 240);
+  --sidebar-foreground: oklch(0.92 0.005 240);
+  --sidebar-primary: oklch(0.52 0.14 185);
+  --sidebar-primary-foreground: oklch(0.98 0.005 185);
+  --sidebar-accent: oklch(0.20 0.02 240);
+  --sidebar-accent-foreground: oklch(0.92 0.005 240);
+  --sidebar-border: oklch(0.25 0.02 240);
+  --sidebar-ring: oklch(0.52 0.14 185);
 }
 
 @layer base {
@@ -119,6 +113,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -131,27 +131,20 @@
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
   }
+
+  /* Tabular numbers for all data values */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +155,73 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1400px;
     }
   }
+
+  /* Teal left-border accent for active input groups */
+  .input-group-active {
+    border-left: 3px solid oklch(0.52 0.14 185);
+    padding-left: 0.75rem;
+  }
+
+  /* Result metric card */
+  .metric-card {
+    background: oklch(1 0 0);
+    border: 1px solid oklch(0.88 0.006 240);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .metric-card:hover {
+    box-shadow: 0 4px 20px oklch(0.52 0.14 185 / 0.12);
+  }
+
+  /* Emerald highlight for key results */
+  .result-highlight {
+    color: oklch(0.50 0.17 155);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  /* Methodology step number */
+  .step-number {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    background: oklch(0.52 0.14 185);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.95 0.004 240);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.75 0.01 240);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.52 0.14 185);
 }

@@ -28,6 +28,7 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider
         defaultTheme="light"
+        // Scientific/Technical SaaS — light theme, teal primary, Space Grotesk + Inter
         // switchable
       >
         <TooltipProvider>
