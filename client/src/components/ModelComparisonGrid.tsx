@@ -32,7 +32,7 @@ export function ModelComparisonGrid({
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
       {results.map((result) => {
         const isSelected = selectedModelId === result.modelId;
         const feasColor = getFeasibilityColor(result.capacityFactor);
@@ -42,7 +42,7 @@ export function ModelComparisonGrid({
           <div
             key={result.modelId}
             onClick={() => onSelectModel?.(result.modelId)}
-            className={`relative bg-card border-2 rounded-xl p-4 transition-all cursor-pointer ${
+            className={`relative bg-card border-2 rounded-lg p-3 sm:p-4 transition-all cursor-pointer ${
               isSelected
                 ? "border-teal-600 shadow-lg shadow-teal-600/20"
                 : "border-border hover:border-teal-300"

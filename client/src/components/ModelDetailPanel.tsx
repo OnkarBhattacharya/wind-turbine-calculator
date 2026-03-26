@@ -58,7 +58,7 @@ export function ModelDetailPanel({
   return (
     <div className="space-y-5">
       {/* ── Model Header ── */}
-      <div className="bg-card border border-border rounded-xl p-5 shadow-sm">
+      <div className="bg-card border border-border rounded-lg p-4 sm:p-5 shadow-sm">
         <div className="flex items-start justify-between mb-3">
           <div>
             <h2
@@ -74,7 +74,7 @@ export function ModelDetailPanel({
         <Separator className="my-3" />
 
         {/* Key Results Summary */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3">
           {[
             { label: "Rotor Ø", value: `${model.rotorDiameter}m` },
             { label: "Hub Height", value: `${model.hubHeight}m` },
@@ -105,7 +105,7 @@ export function ModelDetailPanel({
       </div>
 
       {/* ── Power Curve ── */}
-      <div className="bg-card border border-border rounded-xl p-5 shadow-sm">
+      <div className="bg-card border border-border rounded-lg p-4 sm:p-5 shadow-sm">
         <h3 className="font-semibold text-sm mb-4 flex items-center gap-2" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
           <Zap className="w-4 h-4 text-teal-600" />
           Power Curve
@@ -142,7 +142,7 @@ export function ModelDetailPanel({
       </div>
 
       {/* ── Monthly AEP ── */}
-      <div className="bg-card border border-border rounded-xl p-5 shadow-sm">
+      <div className="bg-card border border-border rounded-lg p-4 sm:p-5 shadow-sm">
         <h3 className="font-semibold text-sm mb-4 flex items-center gap-2" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
           <BarChart2 className="w-4 h-4 text-teal-600" />
           Monthly Energy Production (per turbine, net)
@@ -162,8 +162,8 @@ export function ModelDetailPanel({
       </div>
 
       {/* ── Wind Rose + Layout ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        <div className="bg-card border border-border rounded-xl p-5 shadow-sm">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
+        <div className="bg-card border border-border rounded-lg p-4 sm:p-5 shadow-sm">
           <h3 className="font-semibold text-sm mb-4 flex items-center gap-2" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
             <Wind className="w-4 h-4 text-teal-600" />
             Wind Rose
@@ -173,7 +173,7 @@ export function ModelDetailPanel({
           </div>
         </div>
 
-        <div className="bg-card border border-border rounded-xl p-5 shadow-sm">
+        <div className="bg-card border border-border rounded-lg p-4 sm:p-5 shadow-sm">
           <h3 className="font-semibold text-sm mb-4 flex items-center gap-2" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
             <Layers className="w-4 h-4 text-teal-600" />
             Turbine Layout ({result.turbinesRequired} units)
@@ -188,7 +188,7 @@ export function ModelDetailPanel({
       </div>
 
       {/* ── Loss Breakdown ── */}
-      <div className="bg-card border border-border rounded-xl p-5 shadow-sm">
+      <div className="bg-card border border-border rounded-lg p-4 sm:p-5 shadow-sm">
         <h3 className="font-semibold text-sm mb-4 flex items-center gap-2" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
           <TrendingUp className="w-4 h-4 text-teal-600" />
           Energy Loss Factors

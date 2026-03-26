@@ -334,16 +334,16 @@ export default function Home() {
 
       {/* ── Main Layout ── */}
       <div className="container py-6">
-        <div className="flex flex-col lg:flex-row gap-6 items-start" style={{ minHeight: "calc(100vh - 300px)" }}>
-          {/* ── LEFT: Input Panel (sticky on desktop) ── */}
+        <div className="flex flex-col lg:flex-row gap-6 items-start">
+          {/* ── LEFT: Input Panel (sticky on desktop, normal flow on mobile) ── */}
           <div
             className="w-full lg:w-[42%] shrink-0"
             style={{
-              position: "sticky",
-              top: 16,
-              maxHeight: "calc(100vh - 100px)",
-              overflowY: "auto",
-              paddingRight: "0.5rem",
+              position: window.innerWidth >= 1024 ? "sticky" : "relative",
+              top: window.innerWidth >= 1024 ? 16 : 0,
+              maxHeight: window.innerWidth >= 1024 ? "calc(100vh - 100px)" : "auto",
+              overflowY: window.innerWidth >= 1024 ? "auto" : "visible",
+              paddingRight: window.innerWidth >= 1024 ? "0.5rem" : "0",
             }}
           >
             <div className="space-y-4">
@@ -619,7 +619,7 @@ export default function Home() {
           </div>
 
           {/* ── RIGHT: Results Panel ── */}
-          <div className="flex-1 min-w-0">
+          <div className="w-full lg:flex-1 lg:min-w-0">
             {comparisonResults.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20 text-center">
                 <div className="w-20 h-20 rounded-full bg-teal-50 border-2 border-teal-100 flex items-center justify-center mb-4">
@@ -635,15 +635,17 @@ export default function Home() {
             ) : (
               <div className="space-y-5">
                 {/* ── Model Comparison Grid ── */}
-                <div>
+                <div className="w-full">
                   <h2 className="text-lg font-bold text-foreground mb-4" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
                     Turbine Model Comparison
                   </h2>
-                  <ModelComparisonGrid
-                    results={comparisonResults}
-                    selectedModelId={selectedModelId}
-                    onSelectModel={(id) => setSelectedModelId(id as TurbineModelId)}
-                  />
+                  <div className="overflow-x-auto lg:overflow-x-visible">
+                    <ModelComparisonGrid
+                      results={comparisonResults}
+                      selectedModelId={selectedModelId}
+                      onSelectModel={(id) => setSelectedModelId(id as TurbineModelId)}
+                    />
+                  </div>
                 </div>
 
                 <Separator />
