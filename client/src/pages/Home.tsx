@@ -33,6 +33,7 @@ import { WindRoseChart } from "@/components/WindRoseChart";
 import { CoordinateMap } from "@/components/CoordinateMap";
 import { ModelComparisonGrid } from "@/components/ModelComparisonGrid";
 import { ModelDetailPanel } from "@/components/ModelDetailPanel";
+import { PostcodeInput } from "@/components/PostcodeInput";
 import {
   compareAllModels,
   estimateMonthlyVariation,
@@ -352,11 +353,24 @@ export default function Home() {
 
                 <CoordinateMap lat={lat} lon={lon} onChange={handleMapChange} />
 
-                <div className="grid grid-cols-2 gap-3 mt-3">
+                <Separator className="my-4" />
+
+                <PostcodeInput
+                  onLocationFound={(result) => {
+                    handleMapChange(result.latitude, result.longitude);
+                  }}
+                  onError={(err) => {
+                    console.error("Postcode geocoding error:", err);
+                  }}
+                />
+
+                <Separator className="my-4" />
+
+                <div className="grid grid-cols-2 gap-3">
                   <div>
                     <Label className="text-xs text-muted-foreground mb-1 block">
-                      Latitude
-                      <InfoTip text="Decimal degrees. Range: -90 to 90." />
+                      Latitude (Manual)
+                      <InfoTip text="Decimal degrees. Range: -90 to 90. Or use postcode above." />
                     </Label>
                     <Input
                       value={latInput}
